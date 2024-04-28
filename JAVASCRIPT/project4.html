@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    
+<div class="div">
+    <h1 id="profile">Color <span id ="name">Convertor</span></h1>
+    <button id="start">start</button>
+</br>
+<p></p>
+    <button id="stop">Stop</button>
+</div>
+   
+</body>
+<script>
+       const randomcolor = function(){
+        const hex='0123456789ABCDEF';
+        let color='#'
+        for(let i=0;i<6;i++){
+            color +=hex[Math.floor(Math.random()*16)];
+            
+        }
+        return color;
+       };
+
+    const elem=document.querySelector('.div')
+    const body=document.querySelector('body')
+    const end=document.querySelector('#stop')
+    const ready=document.querySelector('#start')
+     
+    let loop
+     end.addEventListener('click',function(e){
+        clearInterval(loop)
+     })
+     ready.addEventListener('click',function(e){
+         loop= setInterval( function createTextNode(){
+        body.style.backgroundColor = randomcolor()
+        console.log("node created")
+    },2000)
+    })
+    
+ 
+ 
+    </script>
+</html>

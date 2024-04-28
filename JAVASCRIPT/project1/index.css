@@ -1,0 +1,33 @@
+html{
+    margin: 0;
+}
+span{
+    display: block;
+}
+body{
+    background-color: white;
+}
+.canvas{
+    background-color: white;
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+}
+#yellow{
+    background-color: yellow;
+}
+#Green{
+    background-color: green;
+}
+#Blue{
+    background-color: blue;
+}
+#Pink{
+   background-color: pink;
+}
